@@ -10,10 +10,10 @@ class Magazine : AppCompatActivity() {
         setContentView(R.layout.activity_magazine)
 
         val tovar: ArrayList<String> = ArrayList<String>()       //{"Первая строчка","Вторая строчка","Гордей","Вперед"} // Неизменяемый список
-        var click: Int
+        var balanse: String
 
 
-
+        tovar.add("+1")
         tovar.add("+1")
         tovar.add("+2")
         tovar.add("+3")
@@ -23,11 +23,11 @@ class Magazine : AppCompatActivity() {
        // var intent = intent
       //  intent.getIntExtra("balanse", 0)
        // intent.getIntExtra("click", 1)
-        click = intent.getIntExtra("click", 1)
+        //balanse.text = getIntent().getStringExtra("click")
 
 
         val list = findViewById<ListView>(R.id.list1)
-        val adapter = Adapter(tovar, click) //не работает
+        val adapter = Adapter(tovar, click = 1) //не работает
         list.adapter = adapter
 
     }

@@ -49,7 +49,6 @@ import android.widget.Toast
                 if (position == 0)
                 {
                     click+=1
-
                     Toast.makeText(parent?.context, "$click", Toast.LENGTH_SHORT).show()
 
                 }

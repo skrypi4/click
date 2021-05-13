@@ -19,15 +19,13 @@ class MainActivity : AppCompatActivity() {
         var balanse: Int = 0
 
         buttonClick.setOnClickListener {
-            balanse += click
+            balanse += click //Главное число
             text.text = balanse.toString()
         }
 
         magaz.setOnClickListener {
-
             val intent = Intent(this, Magazine::class.java)
-           // intent.putExtra("balanse", balanse)
-            intent.putExtra("click", click)
+            intent.putExtra("click", text.text)
                 startActivity(intent)
         }
     }
